@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*If use the background colour for the card, reduce blur to 1-5-10ish; if not, increase blur > ~30+ for frosted glass effect*/
+
+/* Set Grid-Area Settings */
+
+#viewport{
+  grid-area: answer;
+  background-color: transparent;
+}
+#one{
+  grid-area: one;
+  background-color: transparent;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#zero{
+  grid-area: zero;
+  background-color: transparent;
+}
+#zerozero{
+  grid-area: zeroz;
+  background-color: transparent;
+}
+
+#two{
+  grid-area: two;
+  background-color: transparent;
+}
+#three{
+  grid-area: three;
+  background-color: transparent;
+}
+#four{
+  grid-area: four;
+  background-color: transparent;
+}
+#five{
+  grid-area: five;
+  background-color: transparent;
+}
+#six{
+  grid-area: six;
+  background-color: transparent;
+}
+#seven{
+  grid-area: seven;
+  background-color: transparent;
+}
+#eight{
+  grid-area: eight;
+  background-color: transparent;
+}
+#nine{
+  grid-area: nine;
+  background-color: transparent;
+}
+#add{
+  grid-area: add;
+  background-color: transparent;
+}
+#subtract{
+  grid-area: subtract;
+  background-color: transparent;
+}
+#divide{
+  grid-area: divide;
+  background-color: transparent;
+}
+#multiply{
+  grid-area: multiply;
+  background-color: transparent;
+}
+#decimal{
+  grid-area: decimal;
+  background-color: transparent
+}
+#equals{
+  grid-area: equals;
+  background-color: transparent;
+}
+#clear{
+  grid-area: clear;
+  background-color: transparent;
+}
+#delete{
+  grid-area: delete;
+  background-color: transparent;
+}
+body {
+  padding: 4.5rem;
+  margin: 0;
+ background-image: url(https://cdn.eso.org/images/thumb700x/eso1238a.jpg);
+  background-image: url(https://cdn.eso.org/images/thumb700x/eso1322a.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+ background: linear-gradient(90deg, magenta 0, #c4caef 88%);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border: 0px solid grey;
+}
+button:hover{
+  transform: scale(1.1);
+    -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(70px);
+}
+.card {
+  width: 100px;
+  height: auto;
+  padding: 2rem;
+  gap: 8px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  /*background: rgba(255,255,255,.7);*/
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+    
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-areas:
+     "answer answer answer answer"
+     "clear delete delete divide"
+     "seven eight nine multiply"
+     "four five six subtract"
+     "one two three add"
+     "zeroz zero decimal equals"
 }
